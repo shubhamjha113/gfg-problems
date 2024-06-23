@@ -112,12 +112,15 @@ class Solution {
         vector<int> ans;
         vector<int> a(1,-1);
         int i;
-        while(i<arr.size()){
-            if(arr[i]==arr[i+1]){
-                ans.push_back(arr[i]);
-            }
-            else{
-                i++;
+        for(int i=0;i<arr.size();++i)
+        {
+            if(arr[i]==arr[i+1])
+            {
+                if(ans.empty() || ans.back() !=arr[i])
+                {
+                    ans.push_back(arr[i]);
+                }
+                
             }
         }
         if(ans.empty()){
