@@ -13,7 +13,7 @@ class Solution {
         int sum = 0;
         while(n!=0){
             int d = n%10;
-            sum = (d*d*d)+ sum;
+            sum = pow(d,3)+ sum;
             n=n/10;
         }
         return (org == sum);
