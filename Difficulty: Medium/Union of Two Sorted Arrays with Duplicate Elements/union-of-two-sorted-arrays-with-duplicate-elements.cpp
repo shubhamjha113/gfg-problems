@@ -12,55 +12,15 @@ class Solution {
     vector<int> findUnion(vector<int> &a, vector<int> &b) {
         int n = a.size() , m=b.size();
         vector<int> ans;
-        int i=0,j=0;
-        while(i<n && j<m){
-            if(i>0 && a[i-1] == a[i]){
-                i++;
-                continue;
-            }
-             if(j>0 && b[j-1] == b[j]){
-                j++;
-                continue;
-            }
-            if(a[i] == b[j]){
-                ans.push_back(a[i]);
-                i++;
-                j++;
-            }
-            else if(a[i] < b[j]){
-                ans.push_back(a[i]);
-                i++;
-            }
-            else {
-                ans.push_back(b[j]);
-                j++;
-            }
+        for(int i=0;i<n;i++ ){
+            ans.push_back(a[i]);
         }
-        
-        
-        while (i < n) {
-      	
-      	// Skip duplicate elements in the first array
-      	if(i > 0 && a[i - 1] == a[i]) {
-            i++;
-            continue;
+        for(int i=0;i<m;i++ ){
+            ans.push_back(b[i]);
         }
-      	ans.push_back(a[i]);
-      	i++;
-    }
-  
-  	// Add the remaining elements of b[]
-  	while (j < m) {
-      
-      	// Skip duplicate elements in the second array
-      	if(j > 0 && b[j - 1] == b[j]) {
-            j++;
-            continue;
-        }
-      	ans.push_back(b[j]);
-      	j++;
-    }
-    return ans;
+        sort(ans.begin() , ans.end());
+        ans.erase(unique(ans.begin(),ans.end()), ans.end());
+        return ans;
     }
 };
 
