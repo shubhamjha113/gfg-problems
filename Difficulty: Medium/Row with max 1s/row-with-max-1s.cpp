@@ -12,15 +12,12 @@ class Solution {
         int row = mat.size();
     int col = mat[0].size();
     
-    int rowNo = -1, maxCount = 0;
+    int rowNo = -1, j = col - 1;
 
     for (int i = 0; i < row; i++) {
-        int index = lower_bound(mat[i].begin(), mat[i].end(), 1) - mat[i].begin();
-        int count = col - index; // Number of 1s in the row
-
-        if (count > maxCount) {
-            maxCount = count;
+        while (j >= 0 && mat[i][j] == 1) {
             rowNo = i;
+            j--; // Move left
         }
     }
     return rowNo;
