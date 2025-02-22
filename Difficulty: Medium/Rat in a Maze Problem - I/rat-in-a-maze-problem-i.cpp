@@ -46,19 +46,21 @@ void solve(vector<vector<int>> &mat,int n,int x,int y,vector<string> &ans,vector
         solve(mat,n,newx,newy,ans,visited,path);
         path.pop_back();
     }
-    //right
-    newx=x;
-    newy=y+1;
-    if(isSafe(newx,newy,mat,visited,n)){
-        path.push_back('R');
-        solve(mat,n,newx,newy,ans,visited,path);
-        path.pop_back();
-    }
+    
     //upper
     newx=x-1;
     newy=y;
     if(isSafe(newx,newy,mat,visited,n)){
         path.push_back('U');
+        solve(mat,n,newx,newy,ans,visited,path);
+        path.pop_back();
+    }
+    
+    //right
+    newx=x;
+    newy=y+1;
+    if(isSafe(newx,newy,mat,visited,n)){
+        path.push_back('R');
         solve(mat,n,newx,newy,ans,visited,path);
         path.pop_back();
     }
