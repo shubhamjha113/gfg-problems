@@ -16,10 +16,10 @@ class Solution {
        while(p.size()>1){
            int x = p.top();
            p.pop();
-           int y = p.top();
+            x+= p.top();
            p.pop();
-           sum += x+y;
-           p.push(x+y);
+           sum += x;
+           p.push(x);
        }
         return sum;
     }
