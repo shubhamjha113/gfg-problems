@@ -12,9 +12,9 @@ b[] = {12, 7, 9}
 {12, 10, 9, 2, 5, 7, 6}</span>
 <span style="font-size:18px"><strong>Explanation :</strong></span>
 
-<input alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/Merge_max_heap_1.jpg" style="height:160px; width:300px" type="image" fdprocessedid="ufq2m">
-<input alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/Merge_max_heap_2.jpg" style="height:120px; width:200px" type="image" fdprocessedid="ebawj">
-<span style="font-size:18px"><input alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/Merge_max_heap_3.jpg" style="height:160px; width:300px" type="image" fdprocessedid="802knq"></span></pre>
+<input alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/Merge_max_heap_1.jpg" style="height:160px; width:300px" type="image" fdprocessedid="6zh5a4">
+<input alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/Merge_max_heap_2.jpg" style="height:120px; width:200px" type="image" fdprocessedid="t6erus">
+<span style="font-size:18px"><input alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/Merge_max_heap_3.jpg" style="height:160px; width:300px" type="image" fdprocessedid="btbiwq"></span></pre>
 
 <p>&nbsp;</p>
 
