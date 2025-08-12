@@ -1,11 +1,3 @@
-//{ Driver Code Starts
-// Initial template for C++
-
-#include <bits/stdc++.h>
-using namespace std;
-
-
-// } Driver Code Ends
 
 // User function template for C++
 
@@ -22,45 +14,23 @@ class Solution {
             st.pop();
             int second = st.top();
             st.pop();
-            if(mat[first][second] && !mat[second][first]){
+            if(mat[first][second]){
                 st.push(second);
             }
-            else if(!mat[first][second] && mat[second][first]){
+            else{
                 st.push(first);
             }
         }
         if(st.empty()) return -1;
         int num = st.top();
         st.pop();
-        int row = 0,col=0;
+        
         for(int i=0;i<n;i++){
-            row += mat[num][i];
-            col +=mat[i][num];
+            if(i != num && (mat[num][i] || !mat[i][num]) ){
+                return -1;
+            }
         }
-        return row == 1 && col == n ? num :-1;
+        return num;
         
     }
 };
-
-
-//{ Driver Code Starts.
-
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n;
-        cin >> n;
-        vector<vector<int> > M(n, vector<int>(n, 0));
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                cin >> M[i][j];
-            }
-        }
-        Solution ob;
-        cout << ob.celebrity(M) << endl;
-        cout << "~" << endl;
-    }
-}
-
-// } Driver Code Ends
